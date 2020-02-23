@@ -34,12 +34,13 @@
 
     <section class="homepage-van-build">
         <div class="container section">
-            <h2 class="text-primary text-center">Van Build Posts</h2>
+            
+            <h2 class="text-primary text-center">Our Van Life</h2>
 
-            <?php van_build_front_page_list( 4 ); ?>
+            <?php van_life_front_page_list( 4 ); ?>
 
             <div class="button-container">
-                <a href="<?php echo get_permalink(get_page_by_title('Van Build')); ?>" class="button">
+                <a href="<?php echo get_permalink(get_page_by_title('Van Life')); ?>" class="button">
                     Read More
                 </a>
             </div>
@@ -52,12 +53,12 @@
 
     <section class="homepage-van-life" style="background-image: url(<?php echo $image['url']; ?>);">
         <div class="container section";>
-            <h2 class="text-primary text-center">Our Van Life</h2>
+            <h2 class="text-primary text-center">Van Build Posts</h2>
 
-            <?php van_life_front_page_list( 4 ); ?>
+            <?php van_build_front_page_list( 12 ); ?>
 
             <div class="button-container">
-                <a href="<?php echo get_permalink(get_page_by_title('Van Life')); ?>" class="button">
+                <a href="<?php echo get_permalink(get_page_by_title('Van Build')); ?>" class="button">
                     Read More
                 </a>
             </div>

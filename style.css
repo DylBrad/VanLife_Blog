@@ -304,6 +304,11 @@ body.home .parallax {
     padding: .5rem 2rem;
 }
 
+.main-menu .menu li.active,
+.main-menu .menu li:hover {
+    border-bottom: 3px solid var(--white);
+}
+
 .main-menu .current_page_item {
     /* Current page item = integrated wp class to select active list item */
     border-bottom: 3px solid var(--white);
@@ -427,6 +432,12 @@ body.home .parallax {
     width: 18vw;
     box-shadow: grey 0 0 10px;
     border-radius: 50%;
+    transition: all .4s;
+}
+
+.welcome-section .personal-icon:hover {
+    transform: scale(1.1);
+    transition: all .4s;
 }
 
 .welcome-section .profile-1 {
@@ -452,7 +463,23 @@ body.home .parallax {
 
 
 
+/* Front Page Post Section utility */
+.home-post-img-container {
+    transition: all .5s;
+}
+.home-post-img-container img {
+    transition: all .5s;
+}
+
+
+
+
 /* Front Page Van Build Post Section */
+.van-build-post:hover {
+    transform: scale(1.1);
+    transition: all .4s;
+}
+
 .homepage-van-build {
     /* background: var(--lightGray); */
 }
@@ -483,10 +510,11 @@ body.home .parallax {
     }
 
     body.home .post-index-list li:not(:first-child) img {
-        height: 250px;
+        /* The dimansions are now set by WP castom image size */
+        /* height: 250px;
         max-width: fit-content;
         min-height: 250px;
-        width: auto;
+        width: auto; */
     }
 
     body.home .post-index-list li:first-of-type img {
@@ -532,6 +560,8 @@ body.home .parallax {
         background: linear-gradient(to bottom,  rgba(0,0,0,0) 29%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#4d000000',GradientType=0 ); /* IE6-9 */
    }
+
+
 
     .front-build-card:first-of-type .front-build-card-content {
         position: absolute;
@@ -608,6 +638,14 @@ body.home .parallax {
 
 /* homepage */
 /* Front Page Van Blog Section */
+.van-life-post:first-of-type img:hover {
+    transform: scale(1.1);
+}
+
+.van-life-post img:hover {
+    transform: scale(1.1);
+    transition: all .4s;
+}
 
 body.home .van-blog-list {
     max-width: 1100px;

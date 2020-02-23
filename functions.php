@@ -41,6 +41,8 @@ function van_blog_setup() {
     // Register new image size
     add_image_size('square', 350, 350, true);
     add_image_size('rectancle', 1500, true);
+    add_image_size('largerRectancle', 1500, 1050, true);
+    add_image_size('smallerRectancle', 400, 250, true);
     add_image_size('mediumSize', 700, 400, true);
     add_image_size('index-size', 515, 275, true);
     add_image_size('larger', 800, 450, true);
