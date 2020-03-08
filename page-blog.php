@@ -15,5 +15,7 @@
         // Call function from queries.php
         van_life_post_list(); 
     ?>
+
 </main>
+
 <?php get_footer(); ?>

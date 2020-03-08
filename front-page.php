@@ -7,12 +7,26 @@
         </h2>
 
         <div class="container section welcome-section">
-            <?php 
-                $image = get_field('welcome_image');
-                if( !empty($image) ): ?>
-                    <img class="world-map fade-in" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                <?php endif; 
-            ?>
+            <div class="welcome_img_container">
+                <?php 
+                    $image = get_field('welcome_image');
+                    if( !empty($image) ): ?>
+                        <img class="world-map fade-in" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <?php endif; 
+                ?>
+                <?php 
+                    $image = get_field('welcome_img_overlay');
+                    if( !empty($image) ): ?>
+                        <img class="pin pin-1 fade-in flash" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <?php endif; 
+                ?>
+                <?php 
+                    $image = get_field('welcome_img_overlay_2');
+                    if( !empty($image) ): ?>
+                        <img class="pin pin-2 fade-in flash" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <?php endif; 
+                ?>
+            </div>
 
             <?php 
                 $image = get_field('welcome_profile_1');
@@ -55,7 +69,7 @@
         <div class="container section";>
             <h2 class="text-primary text-center">Van Build Posts</h2>
 
-            <?php van_build_front_page_list( 12 ); ?>
+            <?php van_build_front_page_list( 8 ); ?>
 
             <div class="button-container">
                 <a href="<?php echo get_permalink(get_page_by_title('Van Build')); ?>" class="button">

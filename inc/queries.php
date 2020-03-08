@@ -6,8 +6,9 @@ function van_build_post_list( $number = -1 ) { ?>
         <?php
             $args = array (
                 'post_type' => 'van_build_posts',
-                // Use this to call a number of posts on any page. -1 = all posts
-                'posts_per_page' => $number
+                'paged' => get_query_var('paged', 1),
+                // Paged is for pagination
+                
             );
             // Use WP_Query to append the results into $vanBuildPosts
             $vanBuildPosts = new WP_Query($args);
@@ -32,6 +33,14 @@ function van_build_post_list( $number = -1 ) { ?>
             endwhile; wp_reset_postdata(); 
         ?>
     </ul>
+
+    <div class="pagination">
+        <?php 
+            echo paginate_links(array(
+                'total' => $vanBuildPosts->max_num_pages,
+            )); 
+        ?>
+    </div>
 <?php }
 
 
@@ -79,6 +88,7 @@ function van_life_post_list() { ?>
     <ul class="van-blog-list post-index-list">
         <?php
             $args = array (
+                'paged' => get_query_var('paged', 1),
                 'post_type' => 'van_life_posts',
             );
             // Use WP_Query to append the results into $vanBuildPosts
@@ -101,9 +111,19 @@ function van_life_post_list() { ?>
 
         <?php 
             // Ends WP_Query
-            endwhile; wp_reset_postdata(); 
+            endwhile; wp_reset_postdata();   
         ?>
+ 
     </ul>
+
+    <div class="pagination">
+        <?php 
+            echo paginate_links(array(
+                'total' => $vanLifePosts->max_num_pages,
+            )); 
+        ?>
+    </div>
+    
 <?php }
 
 // Query van life blog posts for FRONT page

@@ -102,3 +102,6 @@ add_action('widgets_init', 'van_blog_widgets');
 // }
 
 // add_action('init', 'van_blog_hero_image');
+
+
+
